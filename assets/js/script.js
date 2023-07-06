@@ -8,7 +8,7 @@ var HIGH_SCORE = "high-score";
 var START = "start";
 var START_OVER = "start-over";
 var NEXT = "next";
-var RESETIME = 50;
+var RESETIME = 100;
 var TOTAL_TIME = RESETIME;
 var userInfo = {
   name: "",

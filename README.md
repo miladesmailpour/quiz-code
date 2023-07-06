@@ -13,10 +13,7 @@
 ## Table of Contents
 
 - [How To Use](#how-to-use)
-- [Installation](#installation)
 - [Acceptance_Criteria](#acceptance-criteria)
-- [Helpful Heroku Resources](#helpful-heroku-resources)
-- [Database Strcuture](#database)
 - [How to Contribute](#how-to-contribute)
 
 ## How To Use
@@ -26,90 +23,32 @@
 ![Alt text](./assets/images/Screenshot2.png "Quiz Question")
 ![Alt text](./assets/images/Screenshot3.png "High Score")
 
-## Installation
-
-config the database ans seeding it
-
-```
-mysql:
-source db/schema.sql
-source db/seeds.sql
-node:
-npm install
-node index.js
-```
-
 ## User Story
 
 ```md
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
 ```
 
 ## Acceptance Criteria
 
 ```md
-GIVEN a command-line application that accepts user input
-WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-WHEN I choose to view all departments
-THEN I am presented with a formatted table showing department names and department ids
-WHEN I choose to view all roles
-THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
-WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
-WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and score
 ```
-
-## Helpful Heroku Resources
-
-[npm documentation on MySQL2](https://www.npmjs.com/package/mysql2)
-
-[npm documentation on Dotenv](https://www.npmjs.com/package/dotenv)
-
-[npm documentation on Inquirer](https://www.npmjs.com/package/inquirer)
-
-## Database
-
-- `department`
-
-  - `id`: `INT PRIMARY KEY`
-
-  - `name`: `VARCHAR(30)` to hold department name
-
-- `role`
-
-  - `id`: `INT PRIMARY KEY`
-
-  - `title`: `VARCHAR(30)` to hold role title
-
-  - `salary`: `DECIMAL` to hold role salary
-
-  - `department_id`: `INT` to hold reference to department role belongs to
-
-- `employee`
-
-  - `id`: `INT PRIMARY KEY`
-
-  - `first_name`: `VARCHAR(30)` to hold employee first name
-
-  - `last_name`: `VARCHAR(30)` to hold employee last name
-
-  - `role_id`: `INT` to hold reference to employee role
-
-  - `manager_id`: `INT` to hold reference to another employee that is the manager of the current employee (`null` if the employee has no manager)
 
 ## How to Contribute
 
-Challenges repository
 This is an open source project which has Licensed by MIT which allow you to contribute and used open source codes used in this repo (All Branches).
 More info: https://g.co/kgs/QWcHhF
 
@@ -122,11 +61,11 @@ More info: https://g.co/kgs/QWcHhF
 
   # Https url :
 
-        git clone https://github.com/miladesmailpour/challanges.git
+        git clone https://github.com/miladesmailpour/quiz-code
 
   # ssh url :
 
-        git clone git@github.com:miladesmailpour/challanges.git
+        git clone https://github.com/miladesmailpour/quiz-code
 
   # Checking the fetch/pull and push url :
 
