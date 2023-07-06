@@ -8,7 +8,8 @@ var HIGH_SCORE = "high-score";
 var START = "start";
 var START_OVER = "start-over";
 var NEXT = "next";
-var TOTAL_TIME = 100;
+var RESETIME = 50;
+var TOTAL_TIME = RESETIME;
 var userInfo = {
   name: "",
   score: 0,
@@ -194,16 +195,6 @@ function nextQuestion() {
     questionTemplate.choice4.textContent = currentQuestion.d;
     questionTemplate.index.textContent = currentQuestion.index;
   } else {
-    displayView(views.quiz, false);
-    displayView(views.result, true);
-    views.result.children[1].textContent =
-      userInfo.name + ": " + userInfo.score;
-    highScores.push(userInfo);
-    quizLocalStorage("highScores", highScores, "w");
-    answredQuestion.length = 0;
-    sortList();
-    console.log(highScores[0]);
-    highestScore.textContent = highScores[0].name + " : " + highScores[0].score;
     TOTAL_TIME = 1;
   }
 }
@@ -229,7 +220,7 @@ function selectorHandler(currentEle) {
           // console.log(userInfo)
           choiceLock(choice, questions[i].answer);
         } else {
-          TOTAL_TIME -= 5;
+          TOTAL_TIME -= 7;
           choiceLock(choice, questions[i].answer, currentEle.parentElement);
         }
       }
@@ -243,11 +234,24 @@ function setTime() {
     TOTAL_TIME--;
     timerDisplay.textContent = "Time: " + TOTAL_TIME + " seconds";
 
-    if (TOTAL_TIME === 0) {
+    if (TOTAL_TIME < 0) {
+      quizLocalStorage("userInfo", userInfo, "r");
+      displayView(views.quiz, false);
+      displayView(views.result, true);
+      views.result.children[1].textContent =
+        userInfo.name + ": " + userInfo.score;
+      highScores.push(userInfo);
+      quizLocalStorage("highScores", highScores, "w");
+      answredQuestion.length = 0;
+      sortList();
+      console.log(highScores[0]);
+      highestScore.textContent =
+        highScores[0].name + " : " + highScores[0].score;
+
       clearInterval(timerInterval);
       displayView(views.quiz, false);
       displayView(views.result, true);
-      TOTAL_TIME = 100;
+      TOTAL_TIME = RESETIME;
       timerDisplay.textContent = "Time: " + TOTAL_TIME + " seconds";
       highestScore.textContent =
         highScores[0].name + " : " + highScores[0].score;
@@ -300,9 +304,6 @@ function choiceLock(choice, correct, parentEle) {
       }
     }
   }
-  // parentEle.removeEventListener('click', viewHandler, true)
-  // console.log(parentEle.children)
-  // parentEle.removeEventListener("click", viewHandler, false);
 }
 // sort the high score
 function sortList() {
