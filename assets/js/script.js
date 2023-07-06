@@ -168,6 +168,7 @@ function quizLocalStorage(name, store, state) {
 }
 // display the questions and handle the navigate between
 function nextQuestion() {
+  mChoice.setAttribute("style", "pointer-events: auto;");
   next.disabled = true;
   for (var i = 0; i < 4; i++) {
     views.quiz.children[1].children[i].setAttribute(
@@ -219,6 +220,7 @@ function selectorHandler(currentEle) {
     // console.log(index)
     for (var i = 0; i < questions.length; i++) {
       if (questions[i].index == index) {
+        mChoice.setAttribute("style", "pointer-events: none;");
         if (choice == questions[i].answer) {
           // console.log("correct " + choice, questions[i].answer)
           quizLocalStorage("userInfo", userInfo, "r");
