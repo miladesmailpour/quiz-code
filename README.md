@@ -53,7 +53,7 @@ This is an open-source project which has Licensed by MIT which allows you to con
 More info: https://g.co/kgs/QWcHhF
 
 - Branches are named modules [n] and each one of them is a unique challenge.
-- Master Branch contains the last solved challenge. (The read me you are reading through, is a default guide when NO challenge availabel to help you do a pre-setup.)
+- Master Branch contains the last solved challenge. (The read me you are reading through, is a default guide when NO challenge is available to help you do a pre-setup.)
 
 # how to use the module and deploy
 
@@ -88,13 +88,13 @@ More info: https://g.co/kgs/QWcHhF
         git commit -m "[your comment]"
         git push origin master/main
 
-- Checkout to the module (the challenge you want to used and deploy)
-  # Checkout to the disred challage :
+- Checkout the module (the challenge you want to use and deploy)
+  # Checkout to the desired challenge :
        git checkout module[n]
   # Verifing :
        git status
   # [Make the change you wish to have]
-       What do you think needed to improve?
+       What do you think needs to improve?
   # Commiting to local and updating the GitHub repo:
          git add .
          git commit -m "[your comment]"
