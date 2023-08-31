@@ -49,15 +49,15 @@ THEN I can save my initials and score
 
 ## How to Contribute
 
-This is an open-source project which has Licensed by MIT which allows you to contribute and use open source codes used in this repo (All Branches).
+This is an open-source project which has Licensed by MIT which allows you to contribute and use open-source codes used in this repo (All Branches).
 More info: https://g.co/kgs/QWcHhF
 
 - Branches are named modules [n] and each one of them is a unique challenge.
-- Master Branch contains the last solved challenge. (The read me your are reading trough, it is a defult guid when NO challage availabel to help you do a pre-setup.)
+- Master Branch contains the last solved challenge. (The read me you are reading through, is a default guide when NO challenge availabel to help you do a pre-setup.)
 
 # how to use the module and deploy
 
-- Clone the repo and make it own
+- Clone the repo and make it your own
 
   # Https URL :
 
@@ -67,15 +67,15 @@ More info: https://g.co/kgs/QWcHhF
 
         git clone https://github.com/miladesmailpour/quiz-code
 
-  # Checking the fetch/pull and push url :
+  # Checking the fetch/pull and push URL :
 
         git remote -v
 
-  # Modifing origin url :
+  # Modifing origin URL :
 
-        git remote add origin [https/ssh url of you repo] https://docs.github.com/en/get-started/quickstart/create-a-repo
+        git remote add origin [https/ssh URL of your repo] https://docs.github.com/en/get-started/quickstart/create-a-repo
 
-  # Verifing the fetch/pull and push url :
+  # Verifing the fetch/pull and push URL :
 
         git remote -v https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories
 
@@ -83,7 +83,7 @@ More info: https://g.co/kgs/QWcHhF
 
         git status
 
-        "if local NOT updated"
+        "If local NOT updated"
         git add .
         git commit -m "[your comment]"
         git push origin master/main
