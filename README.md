@@ -49,21 +49,21 @@ THEN I can save my initials and score
 
 ## How to Contribute
 
-This is an open source project which has Licensed by MIT which allow you to contribute and used open source codes used in this repo (All Branches).
+This is an open-source project which has Licensed by MIT which allows you to contribute and use open source codes used in this repo (All Branches).
 More info: https://g.co/kgs/QWcHhF
 
-- Branches are named as module[n] and each one of them its unique challenge.
-- Master Branch contain the last solved challenge. (the read me your are reading trough, it is a defult guid when NO challage availabel to help you do a pre-setup.)
+- Branches are named modules [n] and each one of them is a unique challenge.
+- Master Branch contains the last solved challenge. (The read me your are reading trough, it is a defult guid when NO challage availabel to help you do a pre-setup.)
 
 # how to use the module and deploy
 
 - Clone the repo and make it own
 
-  # Https url :
+  # Https URL :
 
         git clone https://github.com/miladesmailpour/quiz-code
 
-  # ssh url :
+  # ssh URL :
 
         git clone https://github.com/miladesmailpour/quiz-code
 
